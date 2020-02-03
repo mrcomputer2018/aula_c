@@ -12,8 +12,8 @@ int main()
     scanf("%f",&y);
     scanf("%f",&z);
     /* Fazendoo claculo da media*/
-    media = (x+y+z)/3
-
-
+    media = (x+y+z)/3;
+    /* Imprimindo na tela o resultafo*/
+    printf();
     return 0;
 }
