@@ -4,9 +4,7 @@
 int main()
 {
     /* declarando variaveis float*/
-    float x;
-    float y;
-    float z;
+    float x, y, z, media;
     /*lendo um  valor digiyado*/
     scanf("%f",&x);
     scanf("%f",&y);
@@ -14,6 +12,6 @@ int main()
     /* Fazendoo claculo da media*/
     media = (x+y+z)/3;
     /* Imprimindo na tela o resultafo*/
-    printf();
+    printf("A media dos numeros %f, %f e %f e:\n %f\n", x, y, z, media);
     return 0;
 }
