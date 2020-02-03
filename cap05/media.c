@@ -1,8 +1,7 @@
-
 #include <stdio.h>
+/* programa para tirar media */
 
 int main()
 {
-    printf("meu primero programa em c\n");
     return 0;
 }
