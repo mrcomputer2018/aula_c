@@ -7,6 +7,10 @@ int main()
     float x;
     float y;
     float z;
+    /*lendo um  valor digiyado*/
+    scanf("%f",&x);
+    scanf("%f",&y);
+    scanf("%f",&z);
 
     return 0;
 }
