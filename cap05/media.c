@@ -10,7 +10,7 @@ int main()
     scanf("%f",&x);
     printf("Digite o segundo numero: ",y);
     scanf("%f",&y);
-    printf("Digite o terceiro numero: ", z);
+    printf("Digite o terceiro numero: ",z);
     scanf("%f",&z);
     /* Fazendoo claculo da media*/
     media = (x+y+z)/3;
