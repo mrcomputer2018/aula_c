@@ -13,7 +13,7 @@ int main() {
     printf("Numero de carros vendidos: "); scanf("%d", &nCarVend);
     printf("Valor total de vendas: "); scanf("%f", &totalVendas);
     printf("Salario fixo: "); scanf("%f", &salFixo);
-    printf("Valor fixo por carro vendido: "); scanf("%f", &comFixa);
+    printf("Valor da comissao fixa por carro vendido: "); scanf("%f", &comFixa);
 
     totalComFixa = nCarVend*comFixa;
     porcVenda = totalVendas*0.05;
