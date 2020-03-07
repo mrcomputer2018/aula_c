@@ -19,7 +19,7 @@ int main() {
     porcVenda = totalVendas*0.05;
     salFinal = totalComFixa + porcVenda + salFixo + totalVendas;
 
-    printf("====================\n");
+    printf("===================================\n");
     printf("Salario final do vendedor: R$ %.2f", salFinal);
     return 0;
 
