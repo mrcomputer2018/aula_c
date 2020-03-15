@@ -11,11 +11,12 @@ int main() {
     printf("Digite o preco do brigadeiro escolhido: "); scanf("%f", &precoBrig);
     printf("Digite a quantidade em estoque: "); scanf("%d", &nBrigEstoque);
 
-    estoqueAtual = estoque-nBrigadeiro;
-    porcBrigadeiro = (100-((nBrigadeiro*100)/nBrigEstoque));
+    estoqueAtual = nBrigEstoque-nBrigadeiro;
+    porcBrigadeiro = ((nBrigadeiro*100)/nBrigEstoque);
     if (strcmp(dia,"6")==0)
     {
-        printf("dia da semana %d\n",dia);
+        printf("=========================================\n");
+        printf("dia da semana %s - Sextou!!!!\n",dia);
         frete = 0;
         if ((nBrigadeiro>0) && (nBrigadeiro <=10))
         {
@@ -25,7 +26,8 @@ int main() {
                 printf("=========================================\n");
                 printf("Valor total a ser pago: R$ %0.2f\n", venda);
                 printf("Percentual de brigadeiros comprados: %.2f\n", porcBrigadeiro);
-                printf("Quantidade em estoque atualizada: %d\n", estoqueAtual);
+                printf("Quantidade em estoque atualizada: %d unids\n", estoqueAtual);
+                printf("=========================================\n");
             }
             else if(venda>=80)
             {
@@ -34,7 +36,8 @@ int main() {
                 printf("=========================================\n");
                 printf("Valor total a ser pago: R$ %0.2f\n", venda);
                 printf("Percentual de brigadeiros comprados: %.2f\n", porcBrigadeiro);
-                printf("Quantidade em estoque atualizada: %d\n", estoqueAtual);
+                printf("Quantidade em estoque atualizada: %d unids\n", estoqueAtual);
+                printf("=========================================\n");
             }
             
         }
@@ -47,7 +50,8 @@ int main() {
                 printf("Valor total a ser pago: R$ %0.2f\n", venda);
                 printf("Desconto de 5 porcento\n");
                 printf("Percentual de brigadeiros comprados: %.2f\n", porcBrigadeiro);
-                printf("Quantidade em estoque atualizada: %d\n", estoqueAtual);
+                printf("Quantidade em estoque atualizada: %d unids\n", estoqueAtual);
+                printf("=========================================\n");
             }
             else if(venda>=80)
             {
@@ -55,8 +59,10 @@ int main() {
                 printf("O Cliente ganhou um voucher com desconto de 10 porcento para a próxima compra\n");
                 printf("=========================================\n");
                 printf("Valor total a ser pago: R$ %0.2f\n", venda);
+                printf("Desconto de 5 porcento\n");
                 printf("Percentual de brigadeiros comprados: %.2f\n", porcBrigadeiro);
-                printf("Quantidade em estoque atualizada: %d\n", estoqueAtual);
+                printf("Quantidade em estoque atualizada: %d unids\n", estoqueAtual);
+                printf("=========================================\n");
             }
         }
         else
@@ -67,6 +73,8 @@ int main() {
     }
     else
     {
+        printf("=========================================\n");
+        printf("dia da semana %s - Nao Sextou!!!!\n",dia);
         frete = 10;
          if ((nBrigadeiro>0) && (nBrigadeiro <=10))
         {
@@ -76,7 +84,8 @@ int main() {
                 printf("=========================================\n");
                 printf("Valor total a ser pago: R$ %0.2f\n", venda);
                 printf("Percentual de brigadeiros comprados: %.2f\n", porcBrigadeiro);
-                printf("Quantidade em estoque atualizada: %d\n", estoqueAtual);
+                printf("Quantidade em estoque atualizada: %d unids\n", estoqueAtual);
+                printf("=========================================\n");
             }
             else if(venda>=80)
             {
@@ -85,7 +94,8 @@ int main() {
                 printf("=========================================\n");
                 printf("Valor total a ser pago: R$ %0.2f\n", venda);
                 printf("Percentual de brigadeiros comprados: %.2f\n", porcBrigadeiro);
-                printf("Quantidade em estoque atualizada: %d\n", estoqueAtual);
+                printf("Quantidade em estoque atualizada: %d unids\n", estoqueAtual);
+                printf("=========================================\n");
             }
             
         }
@@ -98,7 +108,8 @@ int main() {
                 printf("Valor total a ser pago: R$ %0.2f\n", venda);
                 printf("Desconto de 5 porcento\n");
                 printf("Percentual de brigadeiros comprados: %.2f\n", porcBrigadeiro);
-                printf("Quantidade em estoque atualizada: %d\n", estoqueAtual);
+                printf("Quantidade em estoque atualizada: %d unids\n", estoqueAtual);
+                printf("=========================================\n");
             }
             else if(venda>=80)
             {
@@ -106,14 +117,18 @@ int main() {
                 printf("O Cliente ganhou um voucher com desconto de 10 porcento para a próxima compra\n");
                 printf("=========================================\n");
                 printf("Valor total a ser pago: R$ %0.2f\n", venda);
+                printf("Desconto de 5 porcento\n");
                 printf("Percentual de brigadeiros comprados: %.2f\n", porcBrigadeiro);
-                printf("Quantidade em estoque atualizada: %d\n", estoqueAtual);
+                printf("Quantidade em estoque atualizada: %d unids\n", estoqueAtual);
+                printf("=========================================\n");
             }
         }
         else
         {
-            printf("Valor de brigadeiros vendidos invalido!!!!>\n");
+            printf("=========================================\n");
+            printf("Valor digitado de brigadeiros vendidos invalido!!!!>\n");
             printf("Digite novamente a quantidade de brigadeiros vendidos\n");
+            printf("=========================================\n");
         }
     }
     
