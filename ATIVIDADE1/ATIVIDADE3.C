@@ -21,7 +21,7 @@ int main() {
         if ((nBrigadeiro>0) && (nBrigadeiro <=10))
         {
             venda = (precoBrig*nBrigadeiro)+frete;
-            if (venda < 80)
+            if ((venda >0) && (venda< 80))
             {
                 printf("=========================================\n");
                 printf("Valor total a ser pago: R$ %0.2f\n", venda);
@@ -44,7 +44,7 @@ int main() {
         else if (nBrigadeiro>10)
         {
              venda = ((precoBrig*nBrigadeiro)*0.95)+frete;
-             if (venda < 80)
+             if ((venda >0) && (venda< 80))
             {
                 printf("=========================================\n");
                 printf("Valor total a ser pago: R$ %0.2f\n", venda);
@@ -79,7 +79,7 @@ int main() {
          if ((nBrigadeiro>0) && (nBrigadeiro <=10))
         {
             venda = (precoBrig*nBrigadeiro)+frete;
-            if (venda < 80)
+            if ((venda >0) && (venda< 80))
             {
                 printf("=========================================\n");
                 printf("Valor total a ser pago: R$ %0.2f\n", venda);
@@ -102,7 +102,7 @@ int main() {
         else if (nBrigadeiro>10)
         {
              venda = ((precoBrig*nBrigadeiro)*0.95)+frete;
-             if (venda < 80)
+             if ((venda >0) && (venda< 80))
             {
                 printf("=========================================\n");
                 printf("Valor total a ser pago: R$ %0.2f\n", venda);
