@@ -37,7 +37,7 @@ int main(){
     else if ((anoTrab<=0) || (idade<=0))/*condicao 2 - criando exibicao de dados
      digitados erradamente*/
     {
-        printf("===============AVISO==============");
+        printf("===============AVISO==============\n");
         printf("Idade do funcionario: %d anos\n", idade);
         printf("Tempo trabalhado    : %d anos\n", anoTrab);
         printf("Dados digitados incorretamente!!!\n");
