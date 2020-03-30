@@ -6,38 +6,29 @@
 // Escreva um programa que imprima o nome, o valor da 
 // venda e comissão do corretor.
 #include <stdio.h>
-#include <string.h>
 
 int main() {
+    char nome[10];
     float venda, comissao;
-    char nome;
-
+   
     printf("==============DADOS==============\n");
-    printf("Digite o nome do vendador: \n"); scanf("%c", &nome);
-    printf("Digite o valor da venda: \n"); scanf("%f", &venda);
+    printf("Digite o nome do vendedor: \n");scanf("%s", &nome);
+    printf("Digite o valor da venda: \n");scanf("%f", &venda);
 
     if((venda > 0) && (venda<30000))
-    {
         comissao = venda*0.07;
-        if((venda>=30000) && (venda<=50000))
-        {
+        else if((venda>=30000) && (venda<=50000))
             comissao = venda*0.095;
-            if (venda>50000)
-            {
+            else if (venda>50000)
                 comissao = venda*0.12;
-            }
-        }
-    }
     else
     {
         printf("==============AVISO==============\n");
         printf("Valor digitado para venda invalido!!!\n");
-        comissao = 0;
-        venda = 0;
         printf("%f\n", venda);
     }
     printf("================IMPRESSAO================\n");
-    printf("Nome do vendedor: %c\n", nome);
-    printf("Valor da Venda  : R$%f\n", venda);
-    printf("Comissao        : R$%f\n", comissao);
+    printf("Nome do vendedor: %s\n", nome);
+    printf("Valor da Venda  : R$%.2f\n", venda);
+    printf("Comissao        : R$%.2f\n", comissao);
 }
