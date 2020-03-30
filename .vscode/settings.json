@@ -11,7 +11,9 @@
         "ATIVIDADE3_SWITCH.C": "cpp",
         "ATIVIDADE3_SWITCH_2.C": "cpp",
         "AV1_EXERC1.C": "cpp",
-        "AV1_EXERC2.C": "cpp"
+        "AV1_EXERC2.C": "cpp",
+        "AV1_EXERC3.C": "cpp",
+        "AV1_EXERC3_1.C": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
