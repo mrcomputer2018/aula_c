@@ -8,5 +8,20 @@
 #include <stdio.h>
 
 int main() {
+    float venda, comissao;
+    char nome [25];
+
+    printf("==============DADOS=============")
+    printf("Digite o nome do vendador: \n"); scanf("%s", &nome);
+    printf("Digite o valor da venda: \n"); scanf("%f", &venda);
+    if (venda>0 && venda<30000)
+    {
+        if (venda>)
+        {
+            /* code */
+        }
+        
+    }
     
+
 }

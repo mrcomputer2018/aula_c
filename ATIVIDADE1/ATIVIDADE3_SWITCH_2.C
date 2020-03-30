@@ -25,8 +25,8 @@ int main (){
 	if (valortotal > 80)
 		printf ("Voce ganhou 10 porcento de desconto em sua proxima aquisicao na loja!\n");
 		
-	if (comprados > 10){
-		valortotal = precobrigadeiro * comprados * 0.95;
+	else if (comprados > 10){
+		valortotal = precobrigadeiro * comprados * 0.95; // acerto condicao para else if - testar 
 		printf ("Valor da compra considerando 5 porcento de desconto:%.2f\n", valortotal);
 	}
 	
