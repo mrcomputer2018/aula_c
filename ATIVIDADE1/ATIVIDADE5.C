@@ -5,3 +5,8 @@
 // a comissão será de 9.5%. Em qualquer outro caso, a comissão será de 7%. 
 // Escreva um programa que imprima o nome, o valor da 
 // venda e comissão do corretor.
+#include <stdio.h>
+
+int main() {
+    
+}
