@@ -63,8 +63,8 @@ int main() {
             printf("==================IMPRESSAO====================\n");
             printf("A ordem decrescente dos numeros e:\n");
             printf("(%d, %d, %d)\n", num2, num1, num3);
-        }
-            else if ((num1<num2) && (num2<num3))// condicao do num3 ser o maior
+       
+            if ((num1<num2) && (num2<num3))// condicao do num3 ser o maior
             {
                 printf("==================IMPRESSAO====================\n");
                 printf("A ordem decrescente dos numeros e:\n");
@@ -76,6 +76,7 @@ int main() {
                 printf("Dois ou mais numeros sao iguais:\n");
                 printf("(%d, %d, %d)\n", num1, num2, num3);  
             }
+         }
         break;
     case 3:
             printf("==================IMPRESSAO====================\n");
