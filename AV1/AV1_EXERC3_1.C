@@ -32,24 +32,30 @@ int main() {
             printf("A ordem crescente dos numeros e:\n");
             printf("(%d, %d, %d)\n", num3, num2, num1);
         }
-        else if ((num1<num2) && (num2>num3))// condicao do num2 ser o maior
+        else 
         {
+            if ((num1<num2) && (num2>num3))// condicao do num2 ser o maior
+            {
             printf("==================IMPRESSAO====================\n");
             printf("A ordem crescente dos numeros e:\n");
             printf("(%d, %d, %d)\n", num3, num1, num2);
-        }
-            else if ((num1<num2) && (num2<num3))// condicao do num3 ser o maior
+            }
+            else
             {
+                if ((num1<num2) && (num2<num3))// condicao do num3 ser o maior
+                {
                 printf("==================IMPRESSAO====================\n");
                 printf("A ordem crescente dos numeros e:\n");
                 printf("(%d, %d, %d)\n", num1, num2, num3);
-            }
-            else // // condicao se algum numero for igual
-            {
+                }
+                else // // condicao se algum numero for igual
+                {
                 printf("==================IMPRESSAO====================\n");
                 printf("Dois ou mais numeros sao iguais:\n");
                 printf("(%d, %d, %d)\n", num1, num2, num3);  
+                }
             }
+        }
         break;
     case 2:
         if((num1>num2) && (num1>num3))// condicao do num1 ser o maior
@@ -58,25 +64,30 @@ int main() {
             printf("A ordem decrescente dos numeros e:\n");
             printf("(%d, %d, %d)\n", num1, num2, num3);
         }
-        else if ((num1<num2) && (num2>num3))// condicao do num2 ser o maior
+        else 
         {
-            printf("==================IMPRESSAO====================\n");
-            printf("A ordem decrescente dos numeros e:\n");
-            printf("(%d, %d, %d)\n", num2, num1, num3);
-       
-            if ((num1<num2) && (num2<num3))// condicao do num3 ser o maior
+            if ((num1<num2) && (num2>num3))// condicao do num2 ser o maior
             {
                 printf("==================IMPRESSAO====================\n");
                 printf("A ordem decrescente dos numeros e:\n");
-                printf("(%d, %d, %d)\n", num3, num2, num1);
+                printf("(%d, %d, %d)\n", num2, num1, num3);
             }
-            else// condicao se algum numero for igual
-            {
+            else
+            { 
+                if ((num1<num2) && (num2<num3))// condicao do num3 ser o maior
+                {
+                printf("==================IMPRESSAO====================\n");
+                printf("A ordem decrescente dos numeros e:\n");
+                printf("(%d, %d, %d)\n", num3, num2, num1);
+                }
+                else// condicao se algum numero for igual
+                {
                 printf("==================IMPRESSAO====================\n");
                 printf("Dois ou mais numeros sao iguais:\n");
                 printf("(%d, %d, %d)\n", num1, num2, num3);  
-            }
-         }
+                }
+            }        
+        }
         break;
     case 3:
             printf("==================IMPRESSAO====================\n");
