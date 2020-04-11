@@ -4,31 +4,31 @@
 #include <stdio.h>
 
 int main() {
-    int num, teste, triangular;
-    float num2;
-
+    int num1=1, aux, triangular, resultado ;
+    
     printf("Digite o numero a ser verificado: \n"); scanf("%d", &triangular);
-
-    for (num = 1; num <= num2; num++)
+    resultado = (num1*(num1+1))/2;
+    for (num1 = 1; resultado <= triangular; num1++)
     {
-        num2 = (num*(num+1))/2;
-        if (num2 == triangular)
+        resultado = (num1*(num1+1))/2;
+        if (resultado == triangular)
         {
-          teste = 1;
+            aux=1;
+            break;
         }
-        else
+        else if(resultado !=triangular)
         {
-           teste = 0; 
+            aux=0;
+            continue;  
         }
-         printf("%d imprimindo num1\n", num);
-        printf("%f imprimindo num2\n", num2);
     }
-    printf("%d imprimindo valor de teste\n", teste);
-    if (teste == 1)
-        printf("Numero e triangular\n");
+    if (aux==1)
+    {
+        printf("+++ Numero e triangular +++\n");
+    }
     else
     {
-        printf("Numero nao e triangular\n");
+        printf("+++ Numero nao e triangular +++\n");
     }
-    
+    printf("FIM do PROGRAMA\n", num1);   
 }
