@@ -24,7 +24,6 @@ int main() {
             {
                 eleitor = eleitor + 1;
                 dirigir = dirigir + idade;
-                printf("%d\n",eleitor);
             }
                 else if (idade >=65) 
                 {
