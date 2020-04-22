@@ -15,5 +15,6 @@
 #include <stdio.h>
 
 int main () {
-
+    int idade;
+    char corOlho, corCabelo, sexo;
 }
