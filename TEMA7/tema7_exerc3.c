@@ -7,14 +7,14 @@
 
 int main(){
     // declaracao de variaveis e atribuicao de valor a constante
-    float salMin, sal, mediaSal, mediaSalFinal, salMin3, porcSal3 = 1.0;
+    float salMin, sal, mediaSal, mediaSalFinal, salMin3, porcSal3;
     float mediaSal2, quantSalMin=1.0 ;
     int func, contSal3;
     // laco de repeticao e condicao
     while (sal>0)
     {
         printf("===========DADOS FUNCIONARIO===========\n");
-        printf("Digite o salario minimo vingente (0 p/sair): R$\n"); scanf("%f", &salMin);
+        printf("Digite o salario minimo vingente: R$\n"); scanf("%f", &salMin);
         printf("Digite o salario do funcionario (0 p/sair): R$\n"); scanf("%f", &sal);
         salMin3 = sal*3;
         func=1;
@@ -26,15 +26,10 @@ int main(){
         else if (sal >= salMin3)
         {
             contSal3++;
-            printf("%.2f contsal3 dentro\n", contSal3);
-            
         }
         mediaSal = mediaSal + sal;
         func = func + 1;
     }
-    printf("%d func\n", func);
-    printf("%.2f contsal3\n", contSal3);
-    printf("%.2f mediasal\n", mediaSal);
     quantSalMin= quantSalMin-1;
     porcSal3 = (contSal3*100)/func;
     mediaSalFinal = mediaSal/func;
