@@ -17,4 +17,16 @@
 int main () {
     int idade;
     char corOlho, corCabelo, sexo;
+
+    printf("===============MENU===============\n");
+    printf("Escolha uma das opcoes abaixo:\n");
+    printf("SEXO\n");
+    printf("(M) - Masculino\n");
+    printf("(F) - Feminino\n");
+    scanf("%c", &sexo);
+    printf("COR DOS OLHOS:\n");
+    printf("(A) - Azul\n");
+    printf("(V) - Verde\n");
+    printf("(C) - Castanho\n");
+    scanf("%c", &corOlho);
 }
