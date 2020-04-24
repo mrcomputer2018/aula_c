@@ -7,19 +7,20 @@
 
 int main(){
 
-    int count, paisA, paisB;
+    int count;
+    float paisA, paisB;
     //calculo
     count=1;  
     paisA = 5;
     paisB = 7;
     while (paisA < paisB)
     {
-      paisA = paisA*1.03;
-      paisB = paisB*1.02;
+      paisA = paisA+1.03;
+      paisB = paisB+1.02;
       count++;
-      printf("%d\n", paisA);
-      printf("%d\n", paisB);
-      printf("%d\n", count);
+      printf("%.2f paisA\n", paisA);
+      printf("%.2f paisB\n", paisB);
+      printf("%d cont\n", count);
     }
     printf("Tempo necessario de: %d anos\n", count);
 
