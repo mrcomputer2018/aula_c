@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "TEMA7_DESAFIO.C": "cpp"
+        "TEMA7_DESAFIO.C": "cpp",
+        "ADVINHACAO.C": "cpp"
     }
 }
