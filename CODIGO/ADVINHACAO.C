@@ -3,4 +3,14 @@
 
 int main() {
     int 
+
+printf("************************************\n");
+printf("* Bem-vindo ao jogo de advinhacao  *\n");
+printf("************************************\n");
+
+for (int i = 1; i < 3; i++)
+{
+    /* code */
+}
+
 }
