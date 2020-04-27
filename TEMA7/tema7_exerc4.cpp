@@ -45,7 +45,7 @@ int main () {
     }
     else
     {
-        if ( ((sexo==F) || (sexo==f)) && ( (idade>=18) && (idade) <=35))
+        if ( ((sexo=="F") || (sexo=="f")) && ( (idade>=18) && (idade) <=35))
         {
             sexoF=sexoF+1;
         }
