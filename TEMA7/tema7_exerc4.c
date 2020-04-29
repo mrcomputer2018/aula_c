@@ -16,7 +16,7 @@
 #include <string.h>
 
 int main () {
-    int idade, idadeMaior=0, sexoF=0, quantIndv=0;
+    int idade, idadeMaior=0, sexoF=0, quantIndv=0, indvFora=0;
     char corOlho [10], corCabelo [10], sexo [10];
 
    printf("============DADOS=============\n");
@@ -36,13 +36,15 @@ int main () {
         }
         else if ((corOlho == 'verde') && (corCabelo == 'louro'))
         {
-            quantIndv+1
+            quantIndv=quantIndv+1;
         }
-        
-        
-
-    // cor dos cabelos (louros, castanhos, pretos)
+        else
+        {
+            indvFora=indvFora+1;
+        }
     }
-
-
+    printf("Maior idade encontrada           : %d anos\n", idadeMaior);
+    printf("Quant sexo feminino entre 18 e 35: \n", sexoF);
+    printf("Quant indv olhos verdes e cabelos louros: %d\n", quantIndv);
+    printf("Quant de individuos fora da pesquisa: %d\n", indvFora);
 }
