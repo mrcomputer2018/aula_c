@@ -16,7 +16,7 @@
 #include <string.h>
 
 int main () {
-    int i, idade, idadeMaior=0, sexoF;
+    int idade, idadeMaior=0, sexoF=0, quantIndv=0;
     char corOlho [10], corCabelo [10], sexo [10];
 
    printf("============DADOS=============\n");
@@ -24,20 +24,22 @@ int main () {
     while (idade!=-1)
     {
         printf("sexo (masculino e feminino): \n"); scanf("%s",&sexo);
-	    printf("cor dos olhos (azuis, verdes ou castanhos) : \n"); scanf("%s",&corOlho);
-	    printf("cor dos cabelos (louros, castanhos, pretos) : \n"); scanf("%s",&corCabelo);
-        i=1;
+	    printf("cor dos olhos (azuiL, verde ou castanho) : \n"); scanf("%s",&corOlho);
+	    printf("cor dos cabelos (louro, castanho, preto) : \n"); scanf("%s",&corCabelo);
         if (idade > idadeMaior)
         {
         idadeMaior= idade;
         }
-        else
+        else if (((sexo =='FEMININO') || (sexo =='feminino')) && ( (idade>=18) && (idade <=35)))
         {
-            if (((sexo =='F') || (sexo =='f')) && ( (idade>=18) && (idade <=35)))
-            {
-                sexoF=sexoF+1;
-            }
+            sexoF=sexoF+1;
         }
+        else if ((corOlho == 'verde') && (corCabelo == 'louro'))
+        {
+            quantIndv+1
+        }
+        
+        
 
     // cor dos cabelos (louros, castanhos, pretos)
     }
