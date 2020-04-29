@@ -13,6 +13,7 @@
 // O final do conjunto de habitantes é reconhecido pelo valor -1 informado
 // como idade.
 #include <stdio.h>
+#include <string.h>
 
 int main () {
     int i, idade, idadeMaior, sexoF;
