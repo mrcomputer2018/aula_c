@@ -16,25 +16,25 @@
 #include <string.h>
 
 int main () {
-    int idade, idadeMaior=0, sexoF=0, quantIndv=0, indvFora=0;
+    int i=0, idade, idadeMaior=0, sexoF=0, quantIndv=0, indvFora=0;
     char corOlho [10], corCabelo [10], sexo [10];
 
    printf("============DADOS=============\n");
-   printf("Digite a sua idadde: \n"); scanf("%d", &idade);
+   printf("Digite a sua idadde (-1 p/ sair): \n"); scanf("%d", &idade);
     while (idade!=-1)
     {
-        printf("sexo (masculino e feminino): \n"); scanf("%s",&sexo);
-	    printf("cor dos olhos (azuiL, verde ou castanho) : \n"); scanf("%s",&corOlho);
-	    printf("cor dos cabelos (louro, castanho, preto) : \n"); scanf("%s",&corCabelo);
+        printf("sexo (masculino ou feminino): \n"); scanf("%s",&sexo);
+	    printf("cor dos olhos (azuL, verde ou castanho) : \n"); scanf("%s",&corOlho);
+	    printf("cor dos cabelos (louro, castanho ou preto) : \n"); scanf("%s",&corCabelo);
         if (idade > idadeMaior)
         {
         idadeMaior= idade;
         }
-        else if (((sexo =='FEMININO') || (sexo =='feminino')) && ( (idade>=18) && (idade <=35)))
+        if (((sexo =='FEMININO') || (sexo =='feminino')) && ( (idade>=18) && (idade <=35)))
         {
             sexoF=sexoF+1;
         }
-        else if ((corOlho == 'verde') && (corCabelo == 'louro'))
+        if ((corOlho == 'verde') && (corCabelo == 'louro'))
         {
             quantIndv=quantIndv+1;
         }
@@ -42,9 +42,13 @@ int main () {
         {
             indvFora=indvFora+1;
         }
+        i=i+1;
+        printf("============DADOS=============\n");
+        printf("Digite a %da. idade(-1 p/ sair): \n",i); scanf("%d", &idade);
     }
-    printf("Maior idade encontrada           : %d anos\n", idadeMaior);
-    printf("Quant sexo feminino entre 18 e 35: \n", sexoF);
+    printf("=================IMPRESSAO===================\n");
+    printf("Maior idade encontrada              : %d anos\n", idadeMaior);
+    printf("Quant sexo feminino entre 18 e 35   : %d\n", sexoF);
     printf("Quant indv olhos verdes e cabelos louros: %d\n", quantIndv);
     printf("Quant de individuos fora da pesquisa: %d\n", indvFora);
 }
