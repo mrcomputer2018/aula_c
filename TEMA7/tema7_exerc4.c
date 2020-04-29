@@ -16,15 +16,18 @@
 #include <string.h>
 
 int main () {
-    int i, idade, idadeMaior, sexoF;
+    int i, idade, idadeMaior=0, sexoF;
     char corOlho [10], corCabelo [10], sexo [10];
 
    printf("============DADOS=============\n");
    printf("Digite a sua idadde: \n"); scanf("%d", &idade);
     while (idade!=-1)
     {
+        printf("sexo (masculino e feminino): \n"); scanf("%s",&sexo);
+	    printf("cor dos olhos (azuis, verdes ou castanhos) : \n"); scanf("%s",&corOlho);
+	    printf("cor dos cabelos (louros, castanhos, pretos) : \n"); scanf("%s",&corCabelo);
         i=1;
-        if (i == 1)
+        if (idade > idadeMaior)
         {
         idadeMaior= idade;
         }
