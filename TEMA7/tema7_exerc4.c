@@ -17,28 +17,10 @@
 
 int main () {
     int i, idade, idadeMaior, sexoF;
-    char corOlho, corCabelo, sexo;
+    char corOlho [10], corCabelo [10], sexo [10];
 
-    printf("===============MENU===============\n");
-    printf("Escolha uma das opcoes abaixo:\n");
-    printf("SEXO\n");
-    printf("(M) - Masculino\n");
-    printf("(F) - Feminino\n");
-    scanf("%c", &sexo);
-    getchar();
-    printf("COR DOS OLHOS:\n");
-    printf("(OA) - Azul\n");
-    printf("(OV) - Verde\n");
-    printf("(OC) - Castanho\n");
-    scanf("%c", &corOlho);
-    getchar();
-    printf("COR DOS CABELOS:\n");
-    printf("(CL) - Louros\n");
-    printf("(CC) - Castanhos\n");
-    printf("(CP) - Pretos\n");
-    scanf("%c", &corCabelo);
-    getchar();
-    printf("Digite a sua idadde: \n"); scanf("%d", &idade);
+   printf("============DADOS=============\n");
+   printf("Digite a sua idadde: \n"); scanf("%d", &idade);
     while (idade!=-1)
     {
         i=1;
