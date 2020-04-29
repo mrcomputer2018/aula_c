@@ -16,10 +16,10 @@
 #include <string.h>
 
 int main () {
-    int i=0, idade, idadeMaior=0, sexoF=0, quantIndv=0, indvFora=0;
+    int i=1, idade, idadeMaior=0, sexoF=0, quantIndv=0, indvFora=0;
     char corOlho [10], corCabelo [10], sexo [10];
 
-   printf("============DADOS=============\n");
+   printf("===============DADOS=============\n");
    printf("Digite a sua idadde (-1 p/ sair): \n"); scanf("%d", &idade);
     while (idade!=-1)
     {
@@ -30,11 +30,12 @@ int main () {
         {
         idadeMaior= idade;
         }
-        if (((sexo =='FEMININO') || (sexo =='feminino')) && ( (idade>=18) && (idade <=35)))
+        // strcmp funciona com string e outro so com uma letra
+        if ((strcmp(sexo,"feminino")==0) && (idade>=18 && idade<=35))
         {
             sexoF=sexoF+1;
         }
-        if ((corOlho == 'verde') && (corCabelo == 'louro'))
+        if ((strcmp(corOlho,"verde")==0) && (strcmp(corCabelo,"louro")==0))
         {
             quantIndv=quantIndv+1;
         }
@@ -43,7 +44,7 @@ int main () {
             indvFora=indvFora+1;
         }
         i=i+1;
-        printf("============DADOS=============\n");
+        printf("==============DADOS=============\n");
         printf("Digite a %da. idade(-1 p/ sair): \n",i); scanf("%d", &idade);
     }
     printf("=================IMPRESSAO===================\n");
