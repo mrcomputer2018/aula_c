@@ -47,5 +47,6 @@ int main() {
     mediaAC = mediaAC / cont;
     printf("Quant media de visitantes em Hoteis nao asfaltados: %.2f\n", mediaAC);
     printf("Lista dos Hoteis c/ asfalto e menos de 1000 visitas: \n", );
+    puts("Hotel         Visitantes");
     
 }
