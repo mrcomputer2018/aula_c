@@ -13,11 +13,11 @@
 #include <string.h>
 
 int main() {
-    char nomeHotel , saida, nomeHotelA[10];
-    int i=0, cont=0, DA, V, AC, numHotel=0, contArray=0, DAArray[10];
+    char nomeHotel , nomeHotelA[10];
+    int i=0, cont=0, DA, V, AC, numHotel=0, contArray=0, DAArray[10], saida;
     float mediaAC;
     // condicional para continuidade do laco de repeticao
-    while (saida == "s")
+    while (saida != 1)
     {
         printf("=============INSIRA OS DADOS===========\n");
         printf("Nome do hotel      : \n"); scanf("%s", &nomeHotel);
@@ -39,14 +39,14 @@ int main() {
         }
         if (AC==1 && V < 1000)
         {
-            nomeHotelA[i] = nomeHotel;
-            DAArray[i] = DA;
+            nomeHotelA[i+1] = nomeHotel;
+            DAArray[i+1] = DA;
             // contador para controlar a array do Htel e visitantes
             contArray = contArray + 1;
             i++;
         }
-        printf("Digite S - continuar / N - sair :\n"); 
-        scanf("%s", &saida);
+        printf("%d teste de saida\n", saida);
+        printf("Digite 0- continuar / 1 - sair :\n"); scanf("%d", &saida);
     }
     mediaAC = mediaAC / cont;
     printf("Numero de Hoteis a mais de 15km do centro: \n", numHotel);
