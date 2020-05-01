@@ -24,8 +24,8 @@ int main() {
         printf("Distancia do centro: \n"); scanf("%d", &DA);
         printf("Num medio de visitantes do ultimo feriado: \n"); scanf("%d", &V);
         printf("Tipo de acesso ao hotel: \n");
-        printf("0 – acesso não asfaltado\n");
-        printf("1 – acesso asfaltado\n");
+        printf("0 – não asfaltado\n");
+        printf("1 – asfaltado\n");
         scanf("%d", &AC);
         // construindo a condicao para contagem
         if (DA > 15)
