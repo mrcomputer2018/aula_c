@@ -10,13 +10,14 @@
 // Hotel A, DA=10, V=100, AC=0
 // Hotel B, DA=20, V=50, AC=1.
 #include <stdio.h>
+#include <string.h>
 
 int main() {
-    char nomeHotel, saida;
-    int cont=0,DA, V, AC, numHotel=0;
+    char nomeHotel , saida, nomeHotelA[10];
+    int i=0, cont=0, DA, V, AC, numHotel=0, contArray=0, DAArray[10];
     float mediaAC;
     // condicional para continuidade do laco de repeticao
-    while (saida!="s")
+    while (saida == "s")
     {
         printf("=============INSIRA OS DADOS===========\n");
         printf("Nome do hotel      : \n"); scanf("%s", &nomeHotel);
@@ -38,15 +39,22 @@ int main() {
         }
         if (AC==1 && V < 1000)
         {
-            /* code */
+            nomeHotelA[i] = nomeHotel;
+            DAArray[i] = DA;
+            // contador para controlar a array do Htel e visitantes
+            contArray = contArray + 1;
+            i++;
         }
-        
-        printf("Digite S - continuar / N - sair \n"); scanf("%c", &saida);
-        printf("========================================\n");
+        printf("Digite S - continuar / N - sair :\n"); 
+        scanf("%s", &saida);
     }
     mediaAC = mediaAC / cont;
+    printf("Numero de Hoteis a mais de 15km do centro: \n", numHotel);
     printf("Quant media de visitantes em Hoteis nao asfaltados: %.2f\n", mediaAC);
-    printf("Lista dos Hoteis c/ asfalto e menos de 1000 visitas: \n", );
+    printf("Lista dos Hoteis c/ asfalto e menos de 1000 visitas: \n");
     puts("Hotel         Visitantes");
-    
+    for ( i = 0; i < contArray; i++)
+    {
+        printf("%s           %d", nomeHotelA[i], DAArray[i]);
+    }
 }
