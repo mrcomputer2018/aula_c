@@ -13,8 +13,8 @@
 #include <string.h>
 
 int main() {
-    char nomeHotel , nomeHotelA[10];
-    int i=0, cont=0, DA, V, AC, numHotel=0, contArray=0, DAArray[10], saida;
+    char nomeHotel , nomeHotelA[100];
+    int i=0, a =0, cont=0, DA, V, AC, numHotel=0, contArray=0, DAArray[100], saida;
     float mediaAC;
     // condicional para continuidade do laco de repeticao
     while (saida != 1)
@@ -39,22 +39,31 @@ int main() {
         }
         if (AC==1 && V < 1000)
         {
-            nomeHotelA[i+1] = nomeHotel;
-            DAArray[i+1] = DA;
-            // contador para controlar a array do Htel e visitantes
+            nomeHotelA[a] = nomeHotel;
+            DAArray[a] = DA;
+            // contador para controlar a array do Hotel e visitantes
+            // contador testado e funcioinanado
             contArray = contArray + 1;
-            i++;
+            // valor para mudar os indices do vetor
+            a = a +1;
+            printf("%s vetor nome\n", nomeHotelA[a]);
+            printf("%d vetor DA\n", DAArray[a]);
         }
-        printf("%d teste de saida\n", saida);
-        printf("Digite 0- continuar / 1 - sair :\n"); scanf("%d", &saida);
+        // controle para saida do laco
+        printf("****************************************\n");
+        printf("Digite 0 - p/ continuar ou 1 - p/ sair :\n"); scanf("%d", &saida);
+        printf("****************************************\n");
     }
     mediaAC = mediaAC / cont;
-    printf("Numero de Hoteis a mais de 15km do centro: \n", numHotel);
-    printf("Quant media de visitantes em Hoteis nao asfaltados: %.2f\n", mediaAC);
+    printf("======================RESULTADOS=======================\n");
+    printf("Numero de Hoteis a mais de 15km do centro          : %d\n", numHotel);
+    printf("Quant media de visitantes em Hoteis nao asfaltados : %.2f\n", mediaAC);
     printf("Lista dos Hoteis c/ asfalto e menos de 1000 visitas: \n");
-    puts("Hotel         Visitantes");
-    for ( i = 0; i < contArray; i++)
+    puts("Hotel         Distancia");
+    // Laco para impressao dos vetores com os dados
+    for ( i; i < contArray; i++)
     {
-        printf("%s           %d", nomeHotelA[i], DAArray[i]);
+        printf("  %c             %d Km do centro\n", nomeHotelA[i], DAArray[i]);
     }
+    printf("=======================================================\n");
 }
