@@ -15,7 +15,7 @@
 int main() {
     char nomeHotel , nomeHotelA[100];
     int i=0, a =0, cont=0, DA, V, AC, numHotel=0, contArray=0, DAArray[100], saida;
-    float mediaAC;
+    float mediaAC =0.0;
     // condicional para continuidade do laco de repeticao
     while (saida != 1)
     {
@@ -42,12 +42,9 @@ int main() {
             nomeHotelA[a] = nomeHotel;
             DAArray[a] = DA;
             // contador para controlar a array do Hotel e visitantes
-            // contador testado e funcioinanado
             contArray = contArray + 1;
             // valor para mudar os indices do vetor
             a = a +1;
-            printf("%s vetor nome\n", nomeHotelA[a]);
-            printf("%d vetor DA\n", DAArray[a]);
         }
         // controle para saida do laco
         printf("****************************************\n");
@@ -59,11 +56,11 @@ int main() {
     printf("Numero de Hoteis a mais de 15km do centro          : %d\n", numHotel);
     printf("Quant media de visitantes em Hoteis nao asfaltados : %.2f\n", mediaAC);
     printf("Lista dos Hoteis c/ asfalto e menos de 1000 visitas: \n");
-    puts("Hotel         Distancia");
+    puts("Hotel         Distancia do centro");
     // Laco para impressao dos vetores com os dados
     for ( i; i < contArray; i++)
     {
-        printf("  %c             %d Km do centro\n", nomeHotelA[i], DAArray[i]);
+        printf("*  %c             %d Km  *\n", nomeHotelA[i], DAArray[i]);
     }
     printf("=======================================================\n");
 }
