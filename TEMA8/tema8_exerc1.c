@@ -5,15 +5,19 @@
 
 int main() {
     // declatando variaveis
-    int num, contNum=1;
+    int num, contNum=1, saida;
     float media, soma;
     // criando laco de repeticao
     do
     {
         printf("==========INSIRA OS DADOS==========\n");
-        printf("Dogite o %do. numero", contNum); scanf("%d", &num);
-    } while (num != 9999);
-    
-
-
+        printf("Digite o %do. numero\n", contNum); scanf("%d", &num);
+        soma=soma+num;
+        contNum++;
+        printf("digite 9999 p/sair"); scanf("%d", &saida);
+    } while (saida != 9999);
+    media = soma/contNum;
+    printf("===========IMPRESSAO==========\n");
+    printf("A Soma dos numeros foi : %.2f\n", soma);
+    printf("A media dos numeros foi: %.2f\n", media);
 }
