@@ -54,6 +54,6 @@ int main() {
             printf("Mas nao desanime, tente de novo!\n");
         }
     }
-    printf("Fim de Jogo!\n");
-    printf("Obrigado por Jogar!\n");
+    printf("***Fim de Jogo!***\n");
+    printf("****Obrigado por Jogar!****\n");
 }
