@@ -3,29 +3,31 @@
 #define numero_de_tentativas 3;
 
 int main() {
-    int chute;
-
+    // Tela de boas vindas
     printf("************************************\n");
     printf("* Bem-vindo ao jogo de advinhacao  *\n");
     printf("************************************\n");
+    // declarando variaveis
+    int numeroSecreto = 42, chute, ganhou = 0, tentativas = 1; 
+    double pontos = 1000;
     // criando o laco de repeticao
-    for (int i = 1; i <= numero_de_tentativas; i++)
+    while (!=ganhou)
     {
         // leitura de dados
-        printf("Qual e o seu %do.chute?\n", i); scanf("%d", &chute);
-        printf("Seu %do. chute o numero: %d\n", i, chute);
+        printf("Qual e o seu %do.chute?\n", tentativas); scanf("%d", &chute);
         // declarando variavel local
-        int numeroSecreto = 42;
         int numeroNegativo = chute < 0;
         //adicionando condicional
-        if (numeroNegativo)
+        if(numeroNegativo)
         {
             printf("Voce nao pode chutar numeros negativos!\n");
-            // decremento de i
-            i--;
+            // decremento de tentativas
+            tentativas--;
+            continue;
         }
         else
         {
+            printf("Seu %do. chute o numero: %d\n", tentativas, chute);
             // atribuicao a variavel do if
             int acertou = chute == numeroSecreto;
             printf("Acertou: %d\n", acertou);
@@ -47,6 +49,8 @@ int main() {
             {
                 printf("Seu chute foi menor do que o numero screto!\n");
             }
+            // contador
+            tentativas++;
             printf("Voce errou!\n");
             printf("Mas nao desanime, tente de novo!\n");
         }
