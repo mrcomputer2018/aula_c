@@ -17,11 +17,16 @@ int main() {
     do
     {
         printf("===========DAdOS DO ALUNO===========\n");
-        printf("Digite o numero da %do. matricula(xxxx): \n", i); scanf("%d", &matricula);
+        printf("Digite o numero da %da. matricula(xxxx): \n", i); scanf("%d", &matricula);
         printf("Digite a nota 1: \n"); scanf("%f", &nota1);
         printf("Digite a nota 2: \n"); scanf("%f", &nota2);
         printf("Digite a nota 3: \n"); scanf("%f", &nota3);
         media = ((2 * nota1) +(3* nota2) +(4* nota3)) / 9;
+        if (matricula == 9999)
+        {
+            break;
+        }
+        
         if (media >= 5)
         {
             printf("======RESULTADO DO ALUNO======\n");
@@ -30,7 +35,7 @@ int main() {
             printf("*** Aluno foi aprovado. Parabens!!! ***\n");
             quantAprovado = quantAprovado + 1;
         }
-        else if (media > 0 && media <5)
+        else if (media >= 0 && media < 5)
         {
             printf("======RESULTADO DO ALUNO======\n");
             printf("Matricula  : %d\n", matricula);
@@ -42,13 +47,12 @@ int main() {
         {
             printf("*** Valores das Notas digitados incorretamente ***\n");
         }
-        quantAluno = quantAluno + 1;
+        quantAluno++;
         i++;
-
     } while (matricula!=9999);
     printf("==========RESULTADOS DA TURMA==========\n");
-    printf("Total de alunos aprovados  : %d", quantAprovado);
-    printf("Total de alunos reprovados : %d", quantReprovado);
-    printf('Total de alunos na turma   : %d', quantAluno);
+    printf("Total de alunos aprovados  : %d\n", quantAprovado);
+    printf("Total de alunos reprovados : %d\n", quantReprovado);
+    printf("Total de alunos na turma   : %d\n", quantAluno);
 }
 // Média final = [(2 * Nota1) +(3* Nota2) +(4* Nota 3)] / 9
