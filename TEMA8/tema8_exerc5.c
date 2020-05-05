@@ -11,28 +11,30 @@
 
 int main() {
     // declarando variavel
-    int matricula, quantAprovado=0, quantReprovado=0, quantAluno=0;
-    float nota1, nota2, nota3, media, mediaFinal;
+    int i=1, matricula, quantAprovado=0, quantReprovado=0, quantAluno=0;
+    float nota1, nota2, nota3, media;
     // criando laco de repeticao
     do
     {
         printf("===========DAdOS DO ALUNO===========\n");
-        printf("Digite o numero da matricula(xxxx): \n"); scanf("%d", &matricula);
+        printf("Digite o numero da %do. matricula(xxxx): \n", i); scanf("%d", &matricula);
         printf("Digite a nota 1: \n"); scanf("%f", &nota1);
         printf("Digite a nota 2: \n"); scanf("%f", &nota2);
         printf("Digite a nota 3: \n"); scanf("%f", &nota3);
         media = ((2 * nota1) +(3* nota2) +(4* nota3)) / 9;
         if (media >= 5)
         {
+            printf("======RESULTADO DO ALUNO======\n");
             printf("Matricula  : %d\n", matricula);
-            printf("Media final: %,2f\n", media);
+            printf("Media final: %.2f\n", media);
             printf("*** Aluno foi aprovado. Parabens!!! ***\n");
             quantAprovado = quantAprovado + 1;
         }
         else if (media > 0 && media <5)
         {
+            printf("======RESULTADO DO ALUNO======\n");
             printf("Matricula  : %d\n", matricula);
-            printf("Media final: %,2f\n", media);
+            printf("Media final: %.2f\n", media);
             printf("*** Aluno foi reprovado. Infelizmente ***\n");
             quantReprovado = quantReprovado + 1;
         }
@@ -41,9 +43,10 @@ int main() {
             printf("*** Valores das Notas digitados incorretamente ***\n");
         }
         quantAluno = quantAluno + 1;
+        i++;
 
     } while (matricula!=9999);
-    printf("==========RESULTADOS==========\n");
+    printf("==========RESULTADOS DA TURMA==========\n");
     printf("Total de alunos aprovados  : %d", quantAprovado);
     printf("Total de alunos reprovados : %d", quantReprovado);
     printf('Total de alunos na turma   : %d', quantAluno);
