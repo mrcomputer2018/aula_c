@@ -16,7 +16,7 @@ int main() {
     // criando laco de repeticao
     do
     {
-        printf("=========DAdOS DO ALUNO========\n");
+        printf("===========DAdOS DO ALUNO===========\n");
         printf("Digite o numero da matricula(xxxx): \n"); scanf("%d", &matricula);
         printf("Digite a nota 1: \n"); scanf("%f", &nota1);
         printf("Digite a nota 2: \n"); scanf("%f", &nota2);
