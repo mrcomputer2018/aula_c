@@ -1,5 +1,7 @@
 // Jogo da advinhacao
 #include <stdio.h>
+#include <stdlib.h> // para o uso da funcao abs()
+#include <time.h> // para usar a semente na funcao rad()
 #define numero_de_tentativas 3;
 
 int main() {
@@ -8,7 +10,14 @@ int main() {
     printf("* Bem-vindo ao jogo de advinhacao  *\n");
     printf("************************************\n");
     // declarando variaveis
-    int numeroSecreto = 42, chute, ganhou = 0, tentativas = 1; 
+    int chute, ganhou = 0, tentativas = 1;
+    double pontos = 1000; 
+    // gerando a semente e numero secreto randomico 
+    int segundos = time (0);
+    srand(segundos);
+    // tornando um numero randomico pequeno
+    int numeroGrande = rand();
+    int numeroSecreto = numeroGrande % 100;
     // criando o laco de repeticao
     while (!ganhou)
     {
@@ -53,7 +62,12 @@ int main() {
             printf("** Voce errou! **\n");
             printf("Mas nao desanime, tente de novo!\n");
         }
+        // usando double apara transformar uma conta de variaveis inteiras em decimais
+        // Usamos o recurso casting
+        double pontosPerdidos = (double) abs(chute - numeroSecreto) / (double) 2;
+        pontos = pontos - pontosPerdidos;  
     }
     printf("***Fim de Jogo!***\n");
+    printf("Voce fez %.2f pontos\n", pontos);
     printf("****Obrigado por Jogar!****\n");
 }
