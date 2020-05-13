@@ -8,7 +8,7 @@ char *nulo(int a) {
     }
     else
     {
-        return] "Numero e nulo";
+        return "Numero e nulo";
     }
 }
 
