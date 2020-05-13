@@ -1,14 +1,14 @@
 // Crie uma função que receba um valor e informe se ele é positivo ou não.
 #include <stdio.h>
 
-char *testaNumero (int a) {
-    if (a<0)
+char testaNumero (int a) {
+    if (a>0)
     {
-        return "Numero e positivo"
+        return "Numero e positivo";
     }
     else
     {
-        return "Numero e negativo"
+        return "Numero e negativo";
     }
 }
 
