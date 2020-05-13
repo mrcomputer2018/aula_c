@@ -4,11 +4,11 @@
 char *nulo(int a) {
     if (a!=0)
     {
-        return " Numero nao e nulo";
+        return "Numero nao e nulo\n";
     }
     else
     {
-        return "Numero e nulo";
+        return "Numero e nulo\n";
     }
 }
 
