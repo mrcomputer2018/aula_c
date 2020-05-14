@@ -1,0 +1,1 @@
+// Crie uma função em linguagem C que receba 2 números e retorne o menor valor.
