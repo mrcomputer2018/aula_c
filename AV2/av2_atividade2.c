@@ -17,14 +17,14 @@ double diaDeVida(int a, int b){
 
 int main() {
     int dia, mes, ano, diaHoje, mesHoje, anoHoje;
-    printf("=========DADOS DE NASCIMENTO=========\n");
+    printf("==========DADOS DO NASCIMENTO=========\n");
     printf("Digite o dia: \n"); scanf("%d", &dia);
     printf("Digite o mes (Ex.: 1 - janeiro): \n"), scanf("%d", &mes);
     printf("Digite o ano (EX.:1970): \n"); scanf("%d", &ano);
-    printf("=========DADOS DE HOJE=========\n");
+    printf("==========DADOS ATUAIS=========\n");
     printf("Digite o dia: \n"); scanf("%d", &diaHoje);
     printf("Digite o mes (Ex.: 1 - janeiro): \n"), scanf("%d", &mesHoje);
-    printf("Digite o ano (EX.:1970): \n"); scanf("%d", &anoHoje);
-    printf("===========RESULTADO===========\n");
+    printf("Digite o ano (EX.:2020): \n"); scanf("%d", &anoHoje);
+    printf("============RESULTADO===========\n");
     printf("Quantidade de dias vividos: %.2f", diaDeVida(calculoHoje(diaHoje, mesHoje, anoHoje), calculoNasc(dia, mes, ano)));
 }
