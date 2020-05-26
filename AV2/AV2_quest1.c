@@ -26,7 +26,7 @@ int main(){
         printf("==========ENTRADA DE DADOS==========\n");
         printf("Nome do carro: \n"); scanf("%s", &nome);
         printf("Preco de mercado: \n"); scanf("%lf", &preco);
-        printf("Potencia     : \n"); scanf("%d", &potencia);
+        printf("Potencia (0 - p/ sair): \n"); scanf("%d", &potencia);
         // condicional para tirar o zero da media
         if (potencia>0)
         {
