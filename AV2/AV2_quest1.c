@@ -7,21 +7,26 @@
 // 	a  porcentagem de veículos com potência (HP) acima de 200;
 // 	o nome do veículo com maior potência.
 #include <stdio.h>
+#include <string.h>
 
 int main(){
     // declaracao das variaveis
-    char nome, maiorPotencia, potenciaNome;
-    int potencia, cont, contPotencia, contMedia;
-    float preco, mediaPreco, porcPotencia;
+    char nome [15], potenciaNome [15];
+    int potencia, contPotencia, maiorPotencia;
+    float cont;
+    double preco, mediaPreco, porcPotencia;
 
-    mediaPreco=0.0;
+    mediaPreco = 0.00;
+    cont = 0.00;
+    contPotencia = 0.00;
+    maiorPotencia = 0;
     // criacao do laco de repeticao
     do
     {
         printf("==========ENTRADA DE DADOS==========\n");
-        printf("Nome do carro: \n"); scanf("%c", &nome);
+        printf("Nome do carro: \n"); scanf("%s", &nome);
+        printf("Preco de mercado: \n"); scanf("%lf", &preco);
         printf("Potencia     : \n"); scanf("%d", &potencia);
-        printf("Preço de mercado: \n"); scanf("%f", &preco);
         // condicional para tirar o zero da media
         if (potencia>0)
         {
@@ -30,20 +35,21 @@ int main(){
             {
                 // contador para Potencia acima de 200HP
                 contPotencia = contPotencia+1;
-            }
+            } 
             if (potencia>maiorPotencia)
             {
-                potenciaNome = nome;
-                maiorPotencia = potenciaNome;
+                maiorPotencia = potencia;
+                strcpy(potenciaNome, nome ); // para copiar o valor de uma string p outra
             }
             // contador para calculo de porcentagem e media de precos
-            cont = cont+1;
+            cont = cont+1.0;
         }
-    } while (potencia=0);
+    } while (potencia!=0); // condicao para saida do laco
     // calculo da poprcentagem de carros acima de 200HP
-    porcPotencia = (contPotencia*100) / cont;
+    porcPotencia = (contPotencia*100) / (double) cont;
     mediaPreco = mediaPreco / cont;
-    printf("==========SAIDA DE DADOS==========");
-    
-
+    printf("=============SAIDA DE DADOS=============\n");
+    printf("Media de preco                  : R$ %.2f\n", mediaPreco);
+    printf("Porc. de veiculos acima de 200Hp: %.2f porc.\n", porcPotencia);
+    printf("Nome do carro com maior Hp      : %s\n", potenciaNome);
 }
