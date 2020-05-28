@@ -6,3 +6,12 @@
 // Após o tratamento do valor lido, com a impressão da mensagem ou o fornecimento das notas correspondentes,
 // o procedimento deve ser repetido. O programa deve parar quando um valor lido for negativo. 
 // Obs: Para alguma operação (a sua escolha) utilize função.
+#include <stdio.h>
+#include <string.h>
+#include<stdlib.h> //biblioteca que chama o system("cls");
+
+int main() {
+    int repositorio;
+    float valorSaque;
+    
+}

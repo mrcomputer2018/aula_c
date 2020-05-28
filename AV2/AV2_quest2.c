@@ -6,11 +6,14 @@
 // Valor inicial: 2  | Valor final: 20  |  Incremento: 2  |  Ordem: Descendente 
 // Resultado: 20, 18, 16, 14, 12, 10, 8, 6, 4, 2
 #include <stdio.h>
+#include <string.h>
+#include<stdlib.h> //biblioteca que chama o system("cls");
 
 int main(){
     // Declaracao de variaveis
-    char ordem, teste;
-    int i, valorInicial, valorFinal, incremento;
+    char teste [2]; // string para teste de saida do programa
+    int ordem, valorInicial, valorFinal, incremento;
+    // laco de repeticao para execucao do programa
     do
     {
         printf("============ENTRADA DE DADOS============\n");
@@ -19,28 +22,53 @@ int main(){
         printf("Valor final: \n"); scanf("%d", &valorFinal);
         printf("Incremento: \n"); scanf("%d", &incremento);
         printf("Escolha a ordem: \n"); 
-        printf("(A) - Ascendente\n");
-        printf("(D) - Descendente\n");
-        scanf("%c", &ordem);
-        if (ordem == "A")
+        printf("(1) - Ascendente\n");
+        printf("(2) - Descendente\n");
+        scanf("%d", &ordem);
+        // condicional para fazer a impressao na ordenacao ascendente
+        if (ordem == 1)
         {
-             for (int i = valorInicial; valorInicial <= valorFinal; i=i+incremento)
+            printf("Resultado:");
+            // laco de repeticao para impressao dos numero do intervalo desejado
+            // ordem ascendente
+            for (int i = valorInicial; i <= valorFinal; i=i+incremento)
             {
-                printf("%d,", i);
+                printf(" %d", i);
+                if (i < valorFinal)// condiconal para impressao das virgulas 
+                {
+                    printf(",");
+                }
             }
         }
-        else if (ordem == "D")
+        // condicional para fazer a impressao na ordenacao descendente
+        else if (ordem == 2)
         {
-            for (int i = valorFinal; valorFinal >= valorInicial; i=i-incremento)
+            printf("Resultado:");
+            // laco de repeticao para impressao dos numero do intervalo desejado
+            // ordem descendente
+            for (int i = valorFinal; i >= valorInicial; i=i-incremento)
             {
-                printf("%d,", i);
+                printf(" %d", i);
+                if (i > valorInicial)// condiconal para impressao das virgulas 
+                {
+                    printf(",");
+                }
             }
         }
+        // condicional para um valor fora do sugerido no menu de ordenacao
         else
         {
-            printf("***Opacao escolhida invalida p/ ordenacao****");
+            printf("***Opacao escolhida invalida p/ ordenacao****\n");
         }
+        printf("\n\n***************************************\n");
         printf("Digite (S) p/ continuar ou (N) p/ sair:\n");
-    } while (teste != "S" || teste != "s" );
-printf("*****Programa encerrado*****");
+        scanf("%s", &teste);
+        system("cls");
+    } while ((strcmp(teste,"S")==0 ) || (strcmp(teste,"s")==0));// condicional de saida do programa
+system("cls");// limpa tela para windows. se fosse linux seria clear.
+printf(" \n");
+printf("****************************\n");
+printf("*****Programa encerrado*****\n");
+printf("****************************\n");
 }
+
