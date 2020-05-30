@@ -8,10 +8,21 @@
 // Obs: Para alguma operação (a sua escolha) utilize função.
 #include <stdio.h>
 #include <string.h>
-#include<stdlib.h> //biblioteca que chama o system("cls");
+#include <stdlib.h> //biblioteca que chama o system("cls");
 
 int main() {
     int repositorio;
     float valorSaque;
     
+    repositorio=1000;
+    do
+    {
+        printf("Informe o valor(negativo p/sair):\n"); scanf("%d", valorSaque);
+    } while (valorSaque < 0);
+    system("cls");// limpa tela para windows. se fosse linux seria clear.
+    printf(" \n");
+    printf("****************************\n");
+    printf("*****Programa encerrado*****\n");
+    printf("****************************\n");
+    printf(" \n");
 }
